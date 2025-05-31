@@ -1,21 +1,30 @@
 import { useEffect, useState } from "react"
 import {getProducts} from "../Mock/asyncService"
 import ItemList from "./ItemList"
+import { useParams } from "react-router-dom"
 
 const ItemListContainer = (props) =>{
     const {greeting}=props
 
     const [data, setData]= useState([])
+    const {categoryId}= useParams()
     console.log('Soy el itemListContainer')
 
     useEffect (()=>{
-        // console.log(getProducts(), 'promesa')
-        //ejecutar la función e promesa
+       
         getProducts()
-        .then((respuesta)=> setData(respuesta))
+        .then((respuesta)=> {
+            if(categoryId){
+                //filtro 
+                setData(respuesta.filter((prod)=> prod.category === categoryId))
+            }else{
+                //sin filtro
+                setData(respuesta)
+            }
+        })
         .catch((error)=> console.error(error))
 
-    },[])
+    },[categoryId])
     //Ejemplo de promise
 
     // const error = true

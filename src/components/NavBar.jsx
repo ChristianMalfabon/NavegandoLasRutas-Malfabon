@@ -12,7 +12,7 @@ const NavBar =() =>{
 
             
             <div className="categories">
-                <NavLink className="nav-link" to="/category/todos los productos">Todos los productos</NavLink>
+                <NavLink className="nav-link" to="/category/nuevos">Nuevos</NavLink>
                 <NavLink className="nav-link" to="/category/los favoritos">Los favoritos</NavLink>
                 <NavLink className="nav-link" to="/category/promociones">Promociones</NavLink>
             </div>

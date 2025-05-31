@@ -5,7 +5,7 @@ const products =[{
     dscription:'Desayuno ideal para los amantes del café, va acompañado de:',
     stock: 10,
     img: '../desayuno_cafe_jugo.jpeg',
-    category: 'todos los productos'
+    category: 'nuevos'
     // si son 50 fotos no ponerlas todas en el proyecto, se recomienda HOTS de imagen 
     //post image y copias el enlace directo 
     // si son pocas fotos ponerlas en la carpeta public
@@ -50,6 +50,20 @@ export const getProducts = () =>{
             } else{
                 reject('Hubo un error')
             }
-        }, 3000)
+        }, .0500)
     })
 }
+
+export const getOneProduct = (id) =>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(!error){
+                let oneProduct= products.find((item)=> item.id === id)
+                resolve(oneProduct)
+            }else{
+                reject('Hubo un error, intente más tarde')
+            }
+        }, .5000)
+    })
+}
+
