@@ -1,0 +1,32 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: rgb(150, 164, 19);
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    
+}
+
+.nav-link{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.nav-link:hover{
+    color:  rgb(150, 164, 19);
+}
+
+.logo-header{
+    width: 8rem;
+}

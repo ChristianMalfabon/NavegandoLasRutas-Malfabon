@@ -1,0 +1,14 @@
+.red-button{
+  padding: 2rem;
+  background-color: beige;
+  font-weight: bold;
+  border-radius: 20%;
+}
+
+.delete-button{
+  padding: 2rem;
+  background-color: rgb(88, 238, 233);
+  font-weight: bold;
+  border-radius: 20%;
+}
+

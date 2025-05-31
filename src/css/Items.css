@@ -1,0 +1,25 @@
+.contadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.btn-menos{
+    width: 2rem;
+    background-color: rgb(148, 15, 15);
+    color: black;
+    border-radius: 50%;
+  }
+
+  .btn-mas{
+    width: 2rem;
+    background-color: green;
+    border-radius: 50%;
+  }
+
+  .cantidad{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+  }
